@@ -1,5 +1,6 @@
 package com.coolmq.amqp.listener;
 
+import com.coolmq.amqp.util.MQConstants;
 import com.rabbitmq.client.Channel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,7 +14,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 
 /**
  * <p><b>Description:</b> RabbitMQ抽象消息监听，所有消息消费者必须继承此类
- * <p><b>Company:</b> Newtouch
+ * <p><b>Company:</b> 
  *
  * @author created by hongda at 13:26 on 2017-10-24
  * @version V0.1

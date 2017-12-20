@@ -10,11 +10,14 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.support.CorrelationData;
 import org.springframework.data.redis.core.RedisTemplate;
 
+import com.coolmq.amqp.util.MQConstants;
+import com.coolmq.amqp.util.RabbitMetaMessage;
+
 import java.util.UUID;
 
 /**
  * <p><b>Description:</b> RabbitMQ消息发送者
- * <p><b>Company:</b> Newtouch
+ * <p><b>Company:</b> 
  *
  * @author created by hongda at 13:03 on 2017-10-24
  * @version V0.1

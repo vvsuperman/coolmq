@@ -1,9 +1,31 @@
 package com.coolmq.amqp.util;
 
+/**
+ * <p><b>Description:</b> 常量类 <p>
+ * <b>Company:</b> 
+ *
+ * @author created by fw at 22:49 on 2017-10-23
+ * @version V0.1
+ */
 public class RabbitMetaMessage {
 	String exchange;
 	String routingKey;
-	String playload;
+	boolean autoTrigger;
+	boolean returnCallback;
+	Object payload;
+	
+	public Object getPayload() {
+		return payload;
+	}
+	public void setPayload(Object payload) {
+		this.payload = payload;
+	}
+	public boolean isReturnCallback() {
+		return returnCallback;
+	}
+	public void setReturnCallback(boolean returnCallback) {
+		this.returnCallback = returnCallback;
+	}
 	public String getExchange() {
 		return exchange;
 	}
@@ -16,11 +38,14 @@ public class RabbitMetaMessage {
 	public void setRoutingKey(String routingKey) {
 		this.routingKey = routingKey;
 	}
-	public String getPlayload() {
-		return playload;
+	public boolean isAutoTrigger() {
+		return autoTrigger;
 	}
-	public void setPlayload(String playload) {
-		this.playload = playload;
+	public void setAutoTrigger(boolean autoTrigger) {
+		this.autoTrigger = autoTrigger;
 	}
+	
+	
+	
 
 }

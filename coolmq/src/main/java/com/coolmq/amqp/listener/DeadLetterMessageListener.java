@@ -1,6 +1,5 @@
 package com.coolmq.amqp.listener;
 
-import cn.com.spdbccc.hotelbank.base.constant.MQConstants;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Message;
@@ -11,11 +10,12 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
+import com.coolmq.amqp.util.MQConstants;
 import com.rabbitmq.client.Channel;
 
 /**
- * <p><b>Description:</b> 死信队列消息监听<p>
- * <b>Company:</b> Newtouch
+ * <p><b>Description:</b> 死信队列消息监听，当有死信发生时会自动监听到<p>
+ * <b>Company:</b> 
  *
  * @author created by hongda at 22:49 on 2017-10-23
  * @version V0.1
