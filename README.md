@@ -1,11 +1,11 @@
 # coolmq 用rabbitmq解决分布式事务
-我们在rabbitmq上肉身实战了一下可靠消息，rabbitmq的发送过程如下
+我们在rabbitmq上肉身实战了一下可靠消息，通常事务的两阶段提交太重，因此用，rabbitmq实现如下功能
 
 发送消息到消息服务
 消息队列将消息发送给监听
 消息监听接受并处理消息
-我们来看看可能发送异常的四种
 
+我们来看看可能发送异常的四种
 ## 1 直接无法到达消息服务
 网络断了，抛出异常，业务直接回滚即可。如果出现connection closed错误，直接增加 connection数即可
 
@@ -62,7 +62,7 @@ rabbitmq提供了确认ack机制，可以用来确认消息是否有返回。因
     channel.basicConsume(TASK_QUEUE_NAME, autoAck, consumer);
 
 ## 5 确认消息丢失
-消息返回时假设确认消息丢失了，那么消息服务会重发消息。注意，如果你设置了autoAck= false，但又没应答 channel.baskAck也没有应答 channel.baskNack，那么会导致非常严重的错误：消息队列会被堵塞住，可参考http://blog.sina.com.cn/s/blo...，  所以，无论如何都必须应答
+消息返回时假设确认消息丢失了，那么消息服务会重发消息。注意，如果你设置了autoAck= false，但又没应答 channel.baskAck也没有应答 channel.baskNack，那么会导致非常严重的错误：消息队列会被堵塞住，可参考http://blog.sina.com.cn/s/blog_48d4cf2d0102w53t.html 所以，无论如何都必须应答
 
 ## 6 消费者业务处理异常
 消息监听接受消息并处理，假设抛异常了，第一阶段事物已经完成，如果要配置回滚则过于麻烦，即使做事务补偿也可能事务补偿失效的情况，所以这里可以做一个重复执行，比如guava的retry，设置一个指数时间来循环执行，如果n次后依然失败，发邮件、短信，用人肉来兜底。
