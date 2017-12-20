@@ -8,8 +8,8 @@
 我们来看看可能发送异常的四种
 ## 1 直接无法到达消息服务
 网络断了，抛出异常，业务直接回滚即可。如果出现connection closed错误，直接增加 connection数即可
-
-connectionFactory.setChannelCacheSize(100);
+   
+   connectionFactory.setChannelCacheSize(100);
 ## 2 消息已经到达服务器，但返回的时候出现异常
 rabbitmq提供了确认ack机制，可以用来确认消息是否有返回。因此我们可以在发送前在db中(内存或关系型数据库)先存一下消息，如果ack异常则进行重发
 
