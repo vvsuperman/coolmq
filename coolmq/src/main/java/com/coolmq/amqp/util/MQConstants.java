@@ -1,7 +1,7 @@
 package com.coolmq.amqp.util;
 /**
  * <p><b>Description:</b> 常量类 <p>
- * <b>Company:</b> Newtouch
+ * <b>Company:</b> 
  *
  * @author created by fw at 22:49 on 2017-10-23
  * @version V0.1

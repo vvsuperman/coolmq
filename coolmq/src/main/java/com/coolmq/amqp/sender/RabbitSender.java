@@ -24,22 +24,14 @@ import java.util.UUID;
  */
 
 public class RabbitSender {
-    private Logger logger = LoggerFactory.getLogger(RabbitSender.class);
-
-    private RedisTemplate<String, Object> redisTemplate;
-    private RabbitTemplate rabbitTemplate;
-
-    public RabbitSender(RedisTemplate<String, Object> redisTemplate, RabbitTemplate rabbitTemplate) {
-        this.redisTemplate = redisTemplate;
-        this.rabbitTemplate = rabbitTemplate;
-    }
 
     /**
      * 发送MQ消息
      * @param rabbitMetaMessage Rabbit元信息对象，用于存储交换器、队列名、消息体
      * @return 消息ID
      */
-    public String send(RabbitMetaMessage rabbitMetaMessage) {
+    public static String send(RabbitMetaMessage rabbitMetaMessage,RedisTemplate redisTemplate,
+    			RabbitTemplate rabbitTemplate, Logger logger) {
         final String msgId = UUID.randomUUID().toString();
         
         // 放缓存

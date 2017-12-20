@@ -52,7 +52,6 @@ public class DeadLetterMessageListener implements ChannelAwareMessageListener {
 		String messageBody = new String(message.getBody());
 
 		logger.warn("dead letter message：{} | tag：{}", messageBody, message.getMessageProperties().getDeliveryTag());
-
 		/*// 入库
 		insertRecord(logKey, message);
 		// 发邮件
