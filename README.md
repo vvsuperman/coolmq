@@ -43,26 +43,26 @@ rabbitmq提供了确认ack机制，可以用来确认消息是否有返回。因
 ## 4 未送达消费者
 消息服务收到消息后，消息会处于"UNACK"的状态，直到客户端确认消息
 
-  channel.basicQos(1); // accept only one unack-ed message at a time (see below)
-  final Consumer consumer = new DefaultConsumer(channel) {
-    @Override
-    public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
-      String message = new String(body, "UTF-8");
+      channel.basicQos(1); // accept only one unack-ed message at a time (see below)
+      final Consumer consumer = new DefaultConsumer(channel) {
+        @Override
+        public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
+          String message = new String(body, "UTF-8");
 
-      System.out.println(" [x] Received '" + message + "'");
-      try {
-        doWork(message);
-      } finally {
-         //确认收到消息
-        channel.basicAck(envelope.getDeliveryTag(), false);
-      }
-    }
-  };
-boolean autoAck = false;
-channel.basicConsume(TASK_QUEUE_NAME, autoAck, consumer);
+          System.out.println(" [x] Received '" + message + "'");
+          try {
+            doWork(message);
+          } finally {
+             //确认收到消息
+            channel.basicAck(envelope.getDeliveryTag(), false);
+          }
+        }
+      };
+    boolean autoAck = false;
+    channel.basicConsume(TASK_QUEUE_NAME, autoAck, consumer);
 
 ## 5 确认消息丢失
-消息返回时假设确认消息丢失了，那么消息服务会重发消息。注意，如果你设置了autoAck= false，但又没应答 channel.baskAck也没有应答 channel.baskNack，那么会导致非常严重的错误：消息队列会被堵塞住，可参考http://blog.sina.com.cn/s/blo...，所以，无论如何都必须应答
+消息返回时假设确认消息丢失了，那么消息服务会重发消息。注意，如果你设置了autoAck= false，但又没应答 channel.baskAck也没有应答 channel.baskNack，那么会导致非常严重的错误：消息队列会被堵塞住，可参考http://blog.sina.com.cn/s/blo...，  所以，无论如何都必须应答
 
 ## 6 消费者业务处理异常
 消息监听接受消息并处理，假设抛异常了，第一阶段事物已经完成，如果要配置回滚则过于麻烦，即使做事务补偿也可能事务补偿失效的情况，所以这里可以做一个重复执行，比如guava的retry，设置一个指数时间来循环执行，如果n次后依然失败，发邮件、短信，用人肉来兜底。
