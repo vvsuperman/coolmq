@@ -25,7 +25,7 @@ public class MsgSender {
 		RabbitMetaMessage  rabbitMetaMessage = new RabbitMetaMessage();
 		/**设置交换机 */
 		rabbitMetaMessage.setExchange("biz_exchange");
-		/**是指routing key */
+		/**指定routing key */
 		rabbitMetaMessage.setRoutingKey("biz_key");
 		/** 设置需要传递的消息体 */
 		rabbitMetaMessage.setPayload("the message you want to send");
