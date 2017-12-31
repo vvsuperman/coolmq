@@ -13,6 +13,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * <p><b>Description:</b> Rabbit MQ连接工厂配置
@@ -115,8 +117,7 @@ public class RabbitConnectionConfiguration {
 
         return stringBuilder.toString();
     }
-
-   
+    
 
    
 }

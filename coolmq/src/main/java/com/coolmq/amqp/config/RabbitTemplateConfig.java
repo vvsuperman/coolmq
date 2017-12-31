@@ -7,6 +7,7 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.RedisTemplate;
 
@@ -24,6 +25,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * @version V0.1
  */
 @Configuration
+@ComponentScan
 public class RabbitTemplateConfig {
 	 private Logger logger = LoggerFactory.getLogger(RabbitTemplateConfig.class);
 	 private ObjectMapper objectMapper = new ObjectMapper();
