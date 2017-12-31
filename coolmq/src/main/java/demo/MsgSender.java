@@ -29,6 +29,8 @@ public class MsgSender {
 		rabbitMetaMessage.setRoutingKey("your_own_biz_key");
 		/** 设置需要传递的消息体 */
 		rabbitMetaMessage.setPayload("the message you want to send");
+		
+		
 		/** 发送消息 */
 		RabbitSender.send(rabbitMetaMessage, redisTemplate, rabbitTemplate, logger);
 	}

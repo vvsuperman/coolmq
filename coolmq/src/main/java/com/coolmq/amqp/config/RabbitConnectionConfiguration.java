@@ -6,6 +6,7 @@ import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.RabbitConnectionFactoryBean;
 import org.springframework.boot.autoconfigure.amqp.RabbitProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.util.StringUtils;
 
@@ -24,6 +25,7 @@ import java.util.concurrent.Executors;
  * @version V0.1
  */
 @Configuration
+@ComponentScan
 public class RabbitConnectionConfiguration {
     private Logger logger = LoggerFactory.getLogger(RabbitConnectionConfiguration.class);
 

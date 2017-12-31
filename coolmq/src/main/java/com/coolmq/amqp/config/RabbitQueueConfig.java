@@ -10,6 +10,7 @@ import org.springframework.amqp.rabbit.listener.SimpleMessageListenerContainer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.amqp.RabbitProperties;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import com.coolmq.amqp.listener.DeadLetterMessageListener;
@@ -29,6 +30,7 @@ import java.util.Map;
  * @version V0.1
  */
 @Configuration
+@ComponentScan
 public class RabbitQueueConfig {
 
     //========================== 声明交换机 ==========================
