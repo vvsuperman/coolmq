@@ -8,6 +8,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 
 import com.coolmq.amqp.sender.RabbitSender;
 import com.coolmq.amqp.util.RabbitMetaMessage;
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 public class MsgSender {
 	
@@ -20,7 +21,7 @@ public class MsgSender {
 	@Autowired
 	Logger logger;
 	
-	public  void produce() {
+	public  void produce() throws Exception {
 		/** 生成一个发送对象 */
 		RabbitMetaMessage  rabbitMetaMessage = new RabbitMetaMessage();
 		/**设置交换机 */
@@ -29,7 +30,6 @@ public class MsgSender {
 		rabbitMetaMessage.setRoutingKey("your_own_biz_key");
 		/** 设置需要传递的消息体 */
 		rabbitMetaMessage.setPayload("the message you want to send");
-		
 		
 		/** 发送消息 */
 		RabbitSender.send(rabbitMetaMessage, redisTemplate, rabbitTemplate, logger);

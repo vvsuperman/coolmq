@@ -4,10 +4,16 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     
     <modelVersion>4.0.0</modelVersion>
+    
+    	<groupId>com.furioustidy</groupId>
     <artifactId>coolmq</artifactId>
-    <version>1.1</version>
-    <name></name>
-	<groupId>com.furioustidy</groupId>
+    <version>1.0-SNAPSHOT</version>
+	
+	 <properties>
+	    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	    <java.version>1.8</java.version>
+    </properties>
+	
     <dependencies>       
     		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 		<dependency>
@@ -16,22 +22,12 @@
 		    <version>2.8.9</version>
 		</dependency>
 		    		
-	    <dependency>
-		    <groupId>org.springframework.boot</groupId>
-		    <artifactId>spring-boot-starter</artifactId>
-		    <version>1.5.9.RELEASE</version>
-		</dependency> 
         <dependency>
              <groupId>org.springframework.amqp</groupId>
 	        	<artifactId>spring-rabbit</artifactId>
 	        <version>1.5.6.RELEASE</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework.amqp/spring-amqp -->
-		<dependency>
-		    <groupId>org.springframework.amqp</groupId>
-		    <artifactId>spring-amqp</artifactId>
-		    <version>1.5.6.RELEASE</version>
-		</dependency>
+	
         
         <dependency>
             <groupId>org.springframework.data</groupId>
@@ -45,5 +41,27 @@
             <optional>true</optional>
         </dependency>   -->    
     </dependencies>
+    
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
    
 </project>

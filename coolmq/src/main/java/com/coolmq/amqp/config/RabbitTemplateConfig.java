@@ -21,7 +21,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
  * <p><b>Description:</b> RabbitTemplate配置工厂类
  * <p><b>Company:</b> 
  *
- * @author created by fw at 11:33 on 2017-07-05
+ * @author created by hongda at 11:33 on 2017-07-05
  * @version V0.1
  */
 @Configuration
@@ -36,7 +36,7 @@ public class RabbitTemplateConfig {
      @Bean
      public RabbitTemplate customRabbitTemplate(ConnectionFactory connectionFactory) {
         RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
-        rabbitTemplate.setMessageConverter(jsonMessageConverter());
+        rabbitTemplate.setMessageConverter(jackson2JsonMessageConverter());
         // mandatory 必须设置为true，ReturnCallback才会调用
         rabbitTemplate.setMandatory(true);
         // 消息发送到RabbitMQ交换器后接收ack回调
@@ -86,7 +86,7 @@ public class RabbitTemplateConfig {
     }
 	 
 	 @Bean
-     public Jackson2JsonMessageConverter jsonMessageConverter() {
+     public Jackson2JsonMessageConverter jackson2JsonMessageConverter() {
         Jackson2JsonMessageConverter jsonMessageConverter = new Jackson2JsonMessageConverter();
         return jsonMessageConverter;
      }
