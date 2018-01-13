@@ -1,0 +1,13 @@
+server:
+  port: 9021
+spring:
+  application:
+    name: microservice-message-consumer
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/
+  instance:
+    preferIpAddress: true
+    
+### 参考：https://spring.io/guides/gs/client-side-load-balancing/

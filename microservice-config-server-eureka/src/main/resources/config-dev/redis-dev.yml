@@ -1,0 +1,8 @@
+#redis config
+redis.host: localhost
+redis.port: 6379
+redis.timeout: 10000
+redis.pool.max-active: 20
+redis.pool.max-wait: -1
+redis.pool.max-idle: 10
+redis.pool.min-idle: 5

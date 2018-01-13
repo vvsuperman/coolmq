@@ -1,0 +1,16 @@
+server:
+  port: 8040
+spring:
+  profiles:
+    active: native  #本地文件
+  application:
+    name: microservice-config-server
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config-${custom_profile:dev}ß
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/

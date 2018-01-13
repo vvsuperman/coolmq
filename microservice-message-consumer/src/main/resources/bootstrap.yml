@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: microservice-config-server
+      name: rabbitmq,redis
+      profile: ${cloud_profile:dev}
+
