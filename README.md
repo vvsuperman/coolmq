@@ -1,5 +1,19 @@
-# 案例
-整合spring cloud demo:https://github.com/vvsuperman/coolmq-spring-cloud-demo ，经测试可用
+# 用法
+
+## 项目结构说明  
+coolmq为实际包  
+microservice们均为demo  
+microservice-discovery-eureka为服务发现  
+microservice-config-server-eureka为服务注册中心  
+microservice-message-provider为消息发送者  
+microservice-message-consumer为消息接收者  
+
+## 使用说明  
+1. maven引入coolmq依赖  
+2. 在项目启动中配置包扫描:@SpringBootApplication(scanBasePackages= {"com.coolmq.amqp.config"}),以自动装配项目bean  
+3. consumer中声明队列: BizQueueConfig.java  
+4. consumer中声明消息接受者: BizMessageListener.java  
+5. provider中发送消息: RabbitSender.send()即可  
 
 # coolmq 用rabbitmq解决分布式事务
 传统的事务解决方案，例如TCC，都太消耗资源，而rabbitmq用两阶段确认确保了消息只要发送，就能送达。本方案是基于Spring-Boot Amqp，已经在生产上部署实践近1年，可用于支付等跨服务调用的业务情况
