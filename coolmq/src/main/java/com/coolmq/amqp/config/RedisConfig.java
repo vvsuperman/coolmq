@@ -43,7 +43,7 @@ public class RedisConfig extends CachingConfigurerSupport{
         jackson2JsonRedisSerializer.setObjectMapper(om);
         redisTemplate.setKeySerializer(stringRedisSerializer);
         redisTemplate.setValueSerializer(jackson2JsonRedisSerializer);
-        /**hash也同样存对象*/
+        /**hash也同样存对象数组*/
         redisTemplate.setHashKeySerializer(stringRedisSerializer);
         redisTemplate.setHashValueSerializer(jackson2JsonRedisSerializer);
         

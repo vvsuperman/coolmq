@@ -23,5 +23,13 @@ public class MQConstants {
 	public static final String DLX_QUEUE = "dlx.queue";
 	public static final String DLX_ROUTING_KEY = "dlx.routing.key";
 	
+	/** 最大重试次数 */
+	public static final int MAX_CONSUMER_COUNT = 5; 
+	/** 递增时的基本常量 */
+	public static final int BASE_NUM = 2;
+	/** 空的字符串 */
+	public static final String BLANK_STR = "";
+	
+	
 
 }

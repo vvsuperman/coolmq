@@ -9,6 +9,7 @@ import org.springframework.amqp.core.MessagePostProcessor;
 import org.springframework.amqp.core.MessageProperties;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.support.CorrelationData;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 
 import com.coolmq.amqp.util.MQConstants;
@@ -28,14 +29,21 @@ import java.util.UUID;
 
 public class RabbitSender {
 
+	@Autowired
+	RedisTemplate redisTemplate;
+	
+	@Autowired
+	RabbitTemplate rabbitTemplate;
+	
+	Logger logger =  LoggerFactory.getLogger(this.getClass());
+
     /**
      * 发送MQ消息
      * @param rabbitMetaMessage Rabbit元信息对象，用于存储交换器、队列名、消息体
      * @return 消息ID
      * @throws JsonProcessingException 
      */
-    public static String send(RabbitMetaMessage rabbitMetaMessage,RedisTemplate redisTemplate,
-    			RabbitTemplate rabbitTemplate, Logger logger) throws JsonProcessingException {
+    public  String send(RabbitMetaMessage rabbitMetaMessage) throws JsonProcessingException {
         final String msgId = UUID.randomUUID().toString();
         
         // 放缓存

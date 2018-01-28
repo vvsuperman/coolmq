@@ -37,10 +37,10 @@ public class BizQueueConfig {
 	   /**配置的死信队列*/
 	   arguments.put("x-dead-letter-exchange", MQConstants.DLX_EXCHANGE);
 	   arguments.put("x-dead-letter-routing-key", MQConstants.DLX_ROUTING_KEY);
-	   /**消息被确认前的最大等待时间*/
-	   arguments.put("x-message-ttl", 60000);
-	   /**消息队列的最大大长度*/
-	   arguments.put("x-max-length", 300);
+	   /**消息被确认前的最大等待时间，默认为无限大 */
+	   //arguments.put("x-message-ttl", 60000);
+	   /**消息队列的最大大长度，默认永不过期*/
+	   //arguments.put("x-max-length", 300);
 	   return new Queue(MQConstants.BUSINESS_QUEUE,true,false,false,arguments);
    }
    
@@ -66,8 +66,15 @@ public class BizQueueConfig {
        container.setExposeListenerChannel(true);
        container.setAcknowledgeMode(AcknowledgeMode.MANUAL);
        container.setMessageListener(bizMessageListener);
-       /** 设置消费者能处理消息的最大个数 */
-       container.setPrefetchCount(100);
+       /** 设置消费者能处理未应答消息的最大个数 */
+       container.setPrefetchCount(10);
        return container;
    }
+   
+   @Bean
+   public Queue helloQueue() {
+	   return new Queue("hello");
+   }
+   
+   
 }

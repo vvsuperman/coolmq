@@ -1,11 +1,16 @@
 #mq config
-rabbitmq.address: localhost:5672
-rabbitmq.username: guest
-rabbitmq.password: guest
-rabbitmq.connection-timeout: 3000
-rabbitmq.template.receive-timeout: 3000
-rabbitmq.listener.concurrency: 5
-rabbitmq.listener.max-concurrency: 20
-rabbitmq.listener.retry.enabled: true
-rabbitmq.virtual.host: coolhost
-rabbitmq.cache.channel.size: 100
+#spring.rabbitmq.address: localhost:5672
+spring.rabbitmq.host: localhost
+spring.rabbitmq.port: 5672
+spring.rabbitmq.username: guest
+spring.rabbitmq.password: guest
+spring.rabbitmq.connection-timeout: 30000
+spring.rabbitmq.template.receive-timeout: 3000
+spring.rabbitmq.listener.concurrency: 5
+spring.rabbitmq.listener.max-concurrency: 20
+spring.rabbitmq.listener.retry.enabled: true
+spring.rabbitmq.virtual.host: coolhost
+spring.rabbitmq.cache.channel.size: 100
+spring.rabbitmq.listener.acknowledge-mode: manual
+spring.rabbitmq.listener.publish-returns: true;
+

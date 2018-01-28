@@ -16,6 +16,9 @@ import com.coolmq.amqp.util.RabbitMetaMessage;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import org.aopalliance.aop.Advice;
+
+
 
 /**
  * <p><b>Description:</b> RabbitTemplate配置工厂类
@@ -46,7 +49,7 @@ public class RabbitTemplateConfig {
 
             String cacheKey = correlationData.getId();
             RabbitMetaMessage metaMessage = (RabbitMetaMessage) redisTemplate.opsForHash().get(MQConstants.MQ_PRODUCER_RETRY_KEY, cacheKey);
-            // 只要消息能投入正确的交换器中，ack就为true
+            // 只要消息能投入正确的交换器中，并持久化，就返回ack为true
             if (ack) {
                 if (!metaMessage.isReturnCallback()) {
                     logger.info("消息已正确投递到队列，correlationData:{}", correlationData);

@@ -34,7 +34,7 @@ import com.rabbitmq.client.Channel;
  */
 @Configuration
 @ComponentScan
-public class RabbitQueueConfig {
+public class DeadQueueConfig {
 	
 	@Component
 	public class DeadLetterMessageListener implements ChannelAwareMessageListener {
@@ -133,7 +133,7 @@ public class RabbitQueueConfig {
      */
     @Bean
     public Queue dlxQueue() {
-        return new Queue(MQConstants.DLX_QUEUE);
+        return new Queue(MQConstants.DLX_QUEUE,true,false,false);
     }
     /**
      * 通过死信路由key绑定死信交换机和死信队列

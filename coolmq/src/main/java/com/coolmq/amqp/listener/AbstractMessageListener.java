@@ -22,10 +22,6 @@ import org.springframework.data.redis.core.RedisTemplate;
 public abstract class AbstractMessageListener implements ChannelAwareMessageListener {
     protected Logger logger = LoggerFactory.getLogger(this.getClass());
 
-    /**
-     * 消费次数
-     */
-    private Integer maxConsumerCount = 3;
 
     @Autowired
     private Jackson2JsonMessageConverter messageConverter;
@@ -59,21 +55,15 @@ public abstract class AbstractMessageListener implements ChannelAwareMessageList
                     messageProperties.getMessageId());
         } catch (Exception e) {
             logger.error("RabbitMQ 消息消费失败，" + e.getMessage(), e);
-            if (consumerCount >= maxConsumerCount) {
+            if (consumerCount >= MQConstants.MAX_CONSUMER_COUNT) {
                 // 入死信队列
                 channel.basicReject(deliveryTag, false);
             } else {
-                // 重回到队列，重新消费
+                // 重回到队列，重新消费,按照2的指数级递增
+            		Thread.sleep((long) (Math.pow(MQConstants.BASE_NUM, consumerCount)*1000));
                 channel.basicNack(deliveryTag, false, true);
             }
         }
     }
 
-    public Integer getMaxConsumerCount() {
-        return maxConsumerCount;
-    }
-
-    public void setMaxConsumerCount(Integer maxConsumerCount) {
-        this.maxConsumerCount = maxConsumerCount;
-    }
 }
