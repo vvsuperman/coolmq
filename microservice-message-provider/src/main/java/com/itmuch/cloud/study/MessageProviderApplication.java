@@ -12,7 +12,7 @@ import org.springframework.cloud.netflix.feign.EnableFeignClients;
 
 @EnableFeignClients
 @EnableDiscoveryClient
-@SpringBootApplication(scanBasePackages= {"com.coolmq.amqp.config","com.itmuch.cloud.study"})
+@SpringBootApplication(scanBasePackages= {"com.coolmq.amqp","com.itmuch.cloud.study"})
 public class MessageProviderApplication {
   public static void main(String[] args) {
     SpringApplication.run(MessageProviderApplication.class, args);

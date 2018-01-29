@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.scheduling.annotation.Async;
 
 import com.coolmq.amqp.util.MQConstants;
 import com.coolmq.amqp.util.RabbitMetaMessage;
@@ -50,7 +51,7 @@ public class RabbitTemplateConfig {
             if (ack) {
                 if (!metaMessage.isReturnCallback()) {
                     logger.info("消息已正确投递到队列，correlationData:{}", correlationData);
-                    // 清除重发缓存
+                    	// 清除重发缓存
                     redisTemplate.opsForHash().delete(MQConstants.MQ_PRODUCER_RETRY_KEY, cacheKey);
                 } else {
                     logger.warn("交换机投机消息至队列失败，correlationData:{}", correlationData);
@@ -60,10 +61,10 @@ public class RabbitTemplateConfig {
                 if (!metaMessage.isAutoTrigger()) {
                     metaMessage.setAutoTrigger(true);
                     try {
-                        redisTemplate.opsForHash().put(MQConstants.MQ_PRODUCER_RETRY_KEY, cacheKey, objectMapper.writeValueAsString(metaMessage));
-                    } catch (JsonProcessingException e) {
-                        e.printStackTrace();
-                    }
+						redisTemplate.opsForHash().put(MQConstants.MQ_PRODUCER_RETRY_KEY, cacheKey, objectMapper.writeValueAsString(metaMessage));
+					} catch (Exception e) {
+						logger.error("删除redis重发缓存失败");
+					}
                 }
             }
         });

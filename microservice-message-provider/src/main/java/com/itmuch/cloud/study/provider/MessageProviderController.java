@@ -29,6 +29,10 @@ public class MessageProviderController {
   @Autowired
   private RedisTemplate redisTemplate;
   
+  @Autowired
+  RabbitSender rabbitSender;
+  
+  
   
   Logger logger = LoggerFactory.getLogger(getClass());
   
@@ -51,7 +55,7 @@ public class MessageProviderController {
 		rabbitMetaMessage.setPayload("the message you want to send");
 		
 		/** 发送消息 */
-		RabbitSender.send(rabbitMetaMessage, redisTemplate, rabbitTemplate, logger);
+		rabbitSender.send(rabbitMetaMessage);
 		
 		return "sucess";
   }
