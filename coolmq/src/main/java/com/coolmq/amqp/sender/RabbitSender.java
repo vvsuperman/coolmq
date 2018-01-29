@@ -11,6 +11,7 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.support.CorrelationData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.stereotype.Component;
 
 import com.coolmq.amqp.util.MQConstants;
 import com.coolmq.amqp.util.RabbitMetaMessage;
@@ -27,8 +28,8 @@ import java.util.UUID;
  * @version V0.1
  */
 
+@Component
 public class RabbitSender {
-
 	@Autowired
 	RedisTemplate redisTemplate;
 	
@@ -43,7 +44,7 @@ public class RabbitSender {
      * @return 消息ID
      * @throws JsonProcessingException 
      */
-    public  String send(RabbitMetaMessage rabbitMetaMessage) throws JsonProcessingException {
+    public String send(RabbitMetaMessage rabbitMetaMessage) throws Exception {
         final String msgId = UUID.randomUUID().toString();
         
         // 放缓存

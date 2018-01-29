@@ -27,6 +27,10 @@ public class MessageProviderController {
   @Autowired
   SimpleSender simpleSender;
   
+  @Autowired
+  RabbitSender rabbitSender;
+  
+  
   
 //  @Autowired
 //  private RabbitSender rabbitSender;
@@ -39,25 +43,25 @@ public class MessageProviderController {
 	  return rabbitmqAddress;
   }
   
-//  @GetMapping("testmq")
-//  @Transactional
-//  public String testMessage() throws Exception {
-//	    /** 生成一个发送对象 */
-//		RabbitMetaMessage  rabbitMetaMessage = new RabbitMetaMessage();
-//		/**设置交换机 */
-//		rabbitMetaMessage.setExchange(MQConstants.BUSINESS_EXCHANGE);
-//		/**指定routing key */
-//		rabbitMetaMessage.setRoutingKey(MQConstants.BUSINESS_KEY);
-//		/** 设置需要传递的消息体,可以是任意对象 */
-//		rabbitMetaMessage.setPayload("the message you want to send");	
-//		
-//		//do some biz
-//		
-//		/** 发送消息 */
-//		rabbitSender.send(rabbitMetaMessage);
-//		
-//		return "sucess";
-//  }
+  @GetMapping("testmq")
+  @Transactional
+  public String testMessage() throws Exception {
+	    /** 生成一个发送对象 */
+		RabbitMetaMessage  rabbitMetaMessage = new RabbitMetaMessage();
+		/**设置交换机 */
+		rabbitMetaMessage.setExchange(MQConstants.BUSINESS_EXCHANGE);
+		/**指定routing key */
+		rabbitMetaMessage.setRoutingKey(MQConstants.BUSINESS_KEY);
+		/** 设置需要传递的消息体,可以是任意对象 */
+		rabbitMetaMessage.setPayload("the message you want to send");	
+		
+		//do some biz
+		
+		/** 发送消息 */
+		rabbitSender.send(rabbitMetaMessage);
+		
+		return "sucess";
+  }
   
   @GetMapping("testmqanno")
   @Transactional
@@ -67,6 +71,8 @@ public class MessageProviderController {
 		RabbitMetaMessage  rabbitMetaMessage = new RabbitMetaMessage();
 		
 		//do some biz
+		/** 发送消息 */
+		rabbitSender.send(rabbitMetaMessage);
 		
 		return "sucess";
   }

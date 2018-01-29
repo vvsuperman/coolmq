@@ -45,14 +45,14 @@ public abstract class AbstractMessageListener implements ChannelAwareMessageList
                 messageProperties.getMessageId(), 1);
 
         logger.info("当前消息ID:{} 消费次数：{}", messageProperties.getMessageId(), consumerCount);
-
+        
+        /** 执行业务，根据执行情况进行消息的ack */
         try {
             receiveMessage(message, messageConverter);
             // 成功的回执
             channel.basicAck(deliveryTag, false);
-            // 如果消费成功，将Redis中统计消息消费次数的缓存删除
-            redisTemplate.opsForHash().delete(MQConstants.MQ_CONSUMER_RETRY_COUNT_KEY,
-                    messageProperties.getMessageId());
+            // 如果消费成功，将Redis中统计消息消费次数的缓存删除        
+           
         } catch (Exception e) {
             logger.error("RabbitMQ 消息消费失败，" + e.getMessage(), e);
             if (consumerCount >= MQConstants.MAX_CONSUMER_COUNT) {
@@ -63,7 +63,16 @@ public abstract class AbstractMessageListener implements ChannelAwareMessageList
             		Thread.sleep((long) (Math.pow(MQConstants.BASE_NUM, consumerCount)*1000));
                 channel.basicNack(deliveryTag, false, true);
             }
-        }
+            return;
+        } 
+        
+        /** 删除相应的key */
+        try { 
+     	   redisTemplate.opsForHash().delete(MQConstants.MQ_CONSUMER_RETRY_COUNT_KEY,
+             messageProperties.getMessageId());
+         } catch(Exception e) {
+             	logger.error("消息监听redis删除消费异常"+e);
+         }
     }
 
 }
