@@ -1,8 +1,0 @@
-#redis config,just for reference, in real enviroment,you must put this file in your config center,e.g. spring cloud config center
-redis.host: localhost
-redis.port: 6379
-redis.timeout: 10000
-redis.pool.max-active: 20
-redis.pool.max-wait: -1
-redis.pool.max-idle: 10
-redis.pool.min-idle: 5

@@ -25,12 +25,7 @@ public class MessageProviderController {
   private String rabbitmqAddress;
   
   @Autowired
-  SimpleSender simpleSender;
-  
-  @Autowired
   RabbitSender rabbitSender;
-  
-  
   
 //  @Autowired
 //  private RabbitSender rabbitSender;
@@ -63,27 +58,4 @@ public class MessageProviderController {
 		return "sucess";
   }
   
-  @GetMapping("testmqanno")
-  @Transactional
-  @MqSender(exchange = MQConstants.BUSINESS_EXCHANGE, routingkey = MQConstants.BUSINESS_KEY)
-  public String testMessageWithAnnotation() throws Exception {
-	    /** 生成一个发送对象 */
-		RabbitMetaMessage  rabbitMetaMessage = new RabbitMetaMessage();
-		
-		//do some biz
-		/** 发送消息 */
-		rabbitSender.send(rabbitMetaMessage);
-		
-		return "sucess";
-  }
-  
-  @GetMapping("testsimplemq")
-  @Transactional
-  public String testSimpleSender() throws Exception {
-	    /** 生成一个发送对象 */
-		simpleSender.send();
-		//do some biz
-		return "sucess";
-  }
-
 }
