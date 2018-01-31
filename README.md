@@ -15,6 +15,9 @@ microservice-message-consumer为消息接收者
 4. consumer中声明消息接受者: BizMessageListener.java  
 5. provider中发送消息: RabbitSender.send()即可  
 
+Spring cloud配置、启动请参考：https://github.com/eacdy/spring-cloud-study
+
+
 # coolmq 用rabbitmq解决分布式事务
 传统的事务解决方案，例如TCC，都太消耗资源，而rabbitmq用两阶段确认确保了消息只要发送，就能送达。本方案是基于Spring-Boot Amqp，已经在生产上部署实践近1年，可用于支付等跨服务调用的业务情况
 
