@@ -124,7 +124,8 @@ public class RabbitTemplateConfig {
 	                .retryIfException()
 	                .retryIfResult(Predicates.equalTo(false))
 	                //重试策略  100ms*2^n 最多10s
-	                .withWaitStrategy(WaitStrategies.exponentialWait(500, 10, TimeUnit.SECONDS))
+	                .withWaitStrategy(WaitStrategies.exponentialWait(MQConstants.MUTIPLIER_TIME, 
+	                		MQConstants.MAX_RETRY_TIME, TimeUnit.SECONDS))
 	                .withStopStrategy(StopStrategies.neverStop())
 	                .build();
 	 
