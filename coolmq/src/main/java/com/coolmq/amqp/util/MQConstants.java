@@ -43,8 +43,11 @@ public class MQConstants {
 	public static final String DLX_EXCHANGE = "dlx.exchange";
 	public static final String DLX_QUEUE = "dlx.queue";
 	public static final String DLX_ROUTING_KEY = "dlx.routing.key";
-	
-	/** 最大重试次数 */
+	/**发送端重试乘数(ms)*/
+	public static final int MUTIPLIER_TIME = 500;
+	/** 发送端最大重试时时间（s）*/
+	public static final int MAX_RETRY_TIME = 10;
+	/** 消费端最大重试次数 */
 	public static final int MAX_CONSUMER_COUNT = 5; 
 	/** 递增时的基本常量 */
 	public static final int BASE_NUM = 2;
