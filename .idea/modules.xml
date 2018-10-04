@@ -3,12 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/coolmq/coolmq.iml" filepath="$PROJECT_DIR$/coolmq/coolmq.iml" />
-      <module fileurl="file://$PROJECT_DIR$/microservice-config-server-eureka/src/main/main.iml" filepath="$PROJECT_DIR$/microservice-config-server-eureka/src/main/main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/microservice-message-consumer/src/main/main1.iml" filepath="$PROJECT_DIR$/microservice-message-consumer/src/main/main1.iml" />
-      <module fileurl="file://$PROJECT_DIR$/microservice-discovery-eureka/src/main/main2.iml" filepath="$PROJECT_DIR$/microservice-discovery-eureka/src/main/main2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/microservice-message-provider/src/main/main3.iml" filepath="$PROJECT_DIR$/microservice-message-provider/src/main/main3.iml" />
       <module fileurl="file://$PROJECT_DIR$/coolmq/src/main/main4.iml" filepath="$PROJECT_DIR$/coolmq/src/main/main4.iml" />
-      <module fileurl="file://$PROJECT_DIR$/microservice-message-daemon/src/main/main5.iml" filepath="$PROJECT_DIR$/microservice-message-daemon/src/main/main5.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-message-provider/microservice-message-demo.iml" filepath="$PROJECT_DIR$/microservice-message-provider/microservice-message-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/microservice-message-demo/microservice-message-provider.iml" filepath="$PROJECT_DIR$/microservice-message-demo/microservice-message-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud-microservice-study.iml" filepath="$PROJECT_DIR$/spring-cloud-microservice-study.iml" />
