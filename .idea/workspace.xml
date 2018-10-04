@@ -9,9 +9,7 @@
     </loaded-modules>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6f4f907-78ca-4a50-a757-45879c79635b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-    </list>
+    <list default="true" id="b6f4f907-78ca-4a50-a757-45879c79635b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/microservice-message-consumer/target/" />
     <ignored path="$PROJECT_DIR$/microservice-message-provider/target/" />
@@ -39,20 +37,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AbstractMessageListener.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AbstractMessageListener.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/listener/AbstractMessageListener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="359">
+            <state relative-caret-position="665">
               <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="spring-cloud-microservice-study.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spring-cloud-microservice-study.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="187">
+              <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -423,7 +426,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89920000" />
+    <option name="totallyTimeSpent" value="89926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="14" y="23" width="1280" height="709" extended-state="0" />
@@ -605,25 +608,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/resources/bootstrap.yml" />
     <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/resources/application.yml" />
-    <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/MessageProviderApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/MessageProviderApplication.java" />
     <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/consumer/BizQueueConfig.java" />
     <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/controller/MessageProviderController.java" />
     <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/listener/DeadLetterMessageListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -817,8 +808,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="187">
+          <caret line="11" column="46" selection-start-line="11" selection-start-column="46" selection-end-line="11" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -855,7 +846,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/listener/AbstractMessageListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="359">
+        <state relative-caret-position="665">
           <caret line="49" column="31" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
         </state>
       </provider>
