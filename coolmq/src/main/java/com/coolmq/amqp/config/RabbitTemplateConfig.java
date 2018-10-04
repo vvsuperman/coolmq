@@ -1,36 +1,17 @@
 package com.coolmq.amqp.config;
 
-import java.util.concurrent.Callable;
-import java.util.concurrent.TimeUnit;
-
+import com.coolmq.amqp.util.CompleteCorrelationData;
+import com.coolmq.amqp.util.DBCoordinator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
-import org.springframework.amqp.rabbit.support.CorrelationData;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.core.RedisTemplate;
-
-import com.coolmq.amqp.sender.RabbitSender;
-import com.coolmq.amqp.util.MQConstants;
-import com.coolmq.amqp.util.RabbitMetaMessage;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.github.rholder.retry.Retryer;
-import com.github.rholder.retry.RetryerBuilder;
-import com.github.rholder.retry.StopStrategies;
-import com.github.rholder.retry.WaitStrategies;
-import com.google.common.base.Predicates;
-
-import org.springframework.amqp.AmqpException;
-import org.springframework.amqp.core.Message;
-import org.springframework.amqp.core.MessageDeliveryMode;
-import org.springframework.amqp.core.MessagePostProcessor;
-import org.springframework.amqp.core.MessageProperties;
-
 
 
 /**
@@ -41,109 +22,65 @@ import org.springframework.amqp.core.MessageProperties;
  * @version V0.1
  */
 @Configuration
-@ComponentScan
 public class RabbitTemplateConfig {
 	 private Logger logger = LoggerFactory.getLogger(RabbitTemplateConfig.class);
-	 static Boolean SUCESS_SEND = false;
-	 
+
 	 @Autowired
-	 RabbitSender rabbitSender;
+	 ApplicationContext applicationContext;
 
      @Autowired
-     private RedisTemplate<String, Object> redisTemplate;	
+     private RedisTemplate<String, Object> redisTemplate;
+
+     boolean returnFlag = false;
 	 
      @Bean
      public RabbitTemplate customRabbitTemplate(ConnectionFactory connectionFactory) {
+         logger.info("==> custom rabbitTemplate, connectionFactory:"+ connectionFactory);
         RabbitTemplate rabbitTemplate = new RabbitTemplate(connectionFactory);
         rabbitTemplate.setMessageConverter(jackson2JsonMessageConverter());
         // mandatory 必须设置为true，ReturnCallback才会调用
         rabbitTemplate.setMandatory(true);
         // 消息发送到RabbitMQ交换器后接收ack回调
         rabbitTemplate.setConfirmCallback((correlationData, ack, cause) -> {
-
-            logger.debug("confirm回调，ack={} correlationData={} cause={}", ack, correlationData, cause);
-
-            String cacheKey = correlationData.getId();
-            RabbitMetaMessage metaMessage = (RabbitMetaMessage) redisTemplate.opsForHash().get(MQConstants.MQ_PRODUCER_RETRY_KEY, cacheKey);
-            // 只要消息能投入正确的交换器中，并持久化，就返回ack为true
-            if (ack) {
-                logger.info("消息已正确投递到队列，correlationData:{}", correlationData);
-                	// 清除重发缓存
-                redisTemplate.opsForHash().delete(MQConstants.MQ_PRODUCER_RETRY_KEY, cacheKey);
-                SUCESS_SEND = true;
-            // 除无Exchange，以及网络中断外的其它异常：重发消息
-            } else {
-                logger.error("消息投递至交换机失败。correlationData:{}，原因：{}", correlationData, cause);
-                //重发消息
-                reSendMsg(cacheKey, metaMessage);
+            if(returnFlag){
+                logger.error("mq发送错误，无对应的的交换机,confirm回掉,ack={},correlationData={} cause={} returnFlag={}",
+                        ack, correlationData, cause, returnFlag);
             }
+
+            logger.info("confirm回调，ack={} correlationData={} cause={}", ack, correlationData, cause);
+            String msgId = correlationData.getId();
+
+            /** 只要消息能投入正确的消息队列，并持久化，就返回ack为true*/
+            if(ack){
+                logger.info("消息已正确投递到队列, correlationData:{}", correlationData);
+                //清除重发缓存
+                String dbCoordinatior = ((CompleteCorrelationData)correlationData).getCoordinator();
+                DBCoordinator coordinator = (DBCoordinator)applicationContext.getBean(dbCoordinatior);
+                coordinator.setMsgSuccess(msgId);
+            }else{
+                logger.error("消息投递至交换机失败,业务号:{}，原因:{}",correlationData.getId(),cause);
+            }
+
         });
 
-        //消息发送到RabbitMQ交换器，但无相应Exchange时触发此回掉：重发消息
+        //消息发送到RabbitMQ交换器，但无相应Exchange时的回调
         rabbitTemplate.setReturnCallback((message, replyCode, replyText, exchange, routingKey) -> {
-            String cacheKey = message.getMessageProperties().getMessageId();
-            message.getClass().getName();
-            logger.error("消息投递至交换机失败，没有找到任何匹配的队列！message id:{},replyCode{},replyText:{},"
-                    + "exchange:{},routingKey{}", cacheKey, replyCode, replyText, exchange, routingKey);
+            String messageId = message.getMessageProperties().getMessageId();
 
-            RabbitMetaMessage metaMessage = (RabbitMetaMessage) redisTemplate.opsForHash().get(MQConstants.MQ_PRODUCER_RETRY_KEY, cacheKey);
-            //重发消息
-            reSendMsg(cacheKey, metaMessage);
+            logger.error("return回调，没有找到任何匹配的队列！message id:{},replyCode{},replyText:{},"
+                    + "exchange:{},routingKey{}", messageId, replyCode, replyText, exchange, routingKey);
+            returnFlag = true;
         });
-        
-        return rabbitTemplate;
-    }
-     
-    //重发消息
-    public void reSendMsg(String msgId, RabbitMetaMessage rabbitMetaMessage) {
-    	
-    	    class ReSendThread implements Callable{
-    	    	    
-    	    		String msgId;
-    	    		RabbitMetaMessage rabbitMetaMessage;
-    	    		
-    	    		public ReSendThread(String msgId, RabbitMetaMessage rabbitMetaMessage) {
-    	    			this.msgId = msgId;
-    	    			this.rabbitMetaMessage = rabbitMetaMessage;
-    	    		}
 
-			@Override
-			public Boolean call() throws Exception {
-				//如果发送成功，重发结束
-				if (SUCESS_SEND)
-					return true;
-				//重发消息
-				rabbitSender.sendMsg(this.rabbitMetaMessage, this.msgId);
-				return false;
-			}
-    	    }
-    	    
-	    	Retryer<Boolean> retryer = RetryerBuilder
-	                .<Boolean>newBuilder()
-	                //抛出runtime异常、checked异常时都会重试，但是抛出error不会重试。
-	                .retryIfException()
-	                .retryIfResult(Predicates.equalTo(false))
-	                //重试策略  100ms*2^n 最多10s
-	                .withWaitStrategy(WaitStrategies.exponentialWait(MQConstants.MUTIPLIER_TIME, 
-	                		MQConstants.MAX_RETRY_TIME, TimeUnit.SECONDS))
-	                .withStopStrategy(StopStrategies.neverStop())
-	                .build();
-	 
-	    	ReSendThread reSendThread = new ReSendThread(msgId, rabbitMetaMessage);
-	    	logger.info("重发消息，msgId:{}", msgId);
-        try {
-            retryer.call(reSendThread);
-            //未发送成功，入死信队列
-            if(!SUCESS_SEND)
-            	     rabbitSender.sendMsgToDeadQueue((String)rabbitMetaMessage.getPayload());
-        } catch (Exception e) {
-            logger.error("重发消息异常");
-        }
+//        /** confirm的超时时间*/
+//        rabbitTemplate.waitForConfirms(MQConstants.TIME_GAP);
+
+        return rabbitTemplate;
     }
 	 
 	 @Bean
-	 public Jackson2JsonMessageConverter jackson2JsonMessageConverter() {
-	    Jackson2JsonMessageConverter jsonMessageConverter = new Jackson2JsonMessageConverter();
-	    return jsonMessageConverter;
-	 }
+     public Jackson2JsonMessageConverter jackson2JsonMessageConverter() {
+        Jackson2JsonMessageConverter jsonMessageConverter = new Jackson2JsonMessageConverter();
+        return jsonMessageConverter;
+     }
 }

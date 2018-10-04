@@ -1,4 +1,4 @@
-package com.coolmq.amqp.config;
+package com.itmuch.cloud.study.consumer;//package com.coolmq.amqp.config;
 
 import com.coolmq.amqp.listener.DeadLetterMessageListener;
 import com.coolmq.amqp.util.MQConstants;
@@ -26,24 +26,22 @@ import com.rabbitmq.client.Channel;
 
 /**
  * <p><b>Description:</b> RabbitMQ交换机、队列的配置类.定义交换机、key、queue并做好绑定。
- * 同时定义每个队列的ttl，队列最大长度，Qos等等
- * 这里只绑定了死信队列。建议每个队列定义自己的QueueConfig
  * <p><b>Company:</b>
  *
  * @author created by fw at 21:54 on 2017-12-23
  * @version V0.1
  */
 @Configuration
-public class DeadQueueConfig {
+public class BizQueueConfig {
 
 
     //========================== 声明交换机 ==========================
     /**
-     * 死信交换机
+     * 交换机
      */
     @Bean
-    public DirectExchange dlxExchange() {
-        return new DirectExchange(MQConstants.DLX_EXCHANGE);
+    public DirectExchange transExchange() {
+        return new DirectExchange("exchange.transmsg");
     }
 
 
@@ -53,35 +51,33 @@ public class DeadQueueConfig {
      * 死信队列
      */
     @Bean
-    public Queue dlxQueue() {
-        return new Queue(MQConstants.DLX_QUEUE,true,false,false);
+    public Queue transQueue() {
+        return new Queue("queue.transmsg",true,false,false);
     }
     /**
      * 通过死信路由key绑定死信交换机和死信队列
      */
     @Bean
-    public Binding dlxBinding() {
-        return BindingBuilder.bind(dlxQueue()).to(dlxExchange())
-                .with(MQConstants.DLX_ROUTING_KEY);
+    public Binding transBinding() {
+        return BindingBuilder.bind(transQueue()).to(transExchange())
+                .with("key.transmsg");
     }
 
     /**
      * 死信队列的监听
      * @param connectionFactory RabbitMQ连接工厂
-     * @param deadLetterMessageListener  死信队列监听
+     * @param transMessageListener  队列监听器
      * @return 监听容器对象
      */
     @Bean
-    public SimpleMessageListenerContainer deadLetterListenerContainer(ConnectionFactory connectionFactory,
-    		DeadLetterMessageListener deadLetterMessageListener) {
+    public SimpleMessageListenerContainer simpleMessageListenerContainer(ConnectionFactory connectionFactory,
+    		TransMessageListener transMessageListener) {
 
         SimpleMessageListenerContainer container = new SimpleMessageListenerContainer(connectionFactory);
-        container.setQueues(dlxQueue());
+        container.setQueues(transQueue());
         container.setExposeListenerChannel(true);
         container.setAcknowledgeMode(AcknowledgeMode.MANUAL);
-        container.setMessageListener(deadLetterMessageListener);
-        /** 设置消费者能处理消息的最大个数 */
-        container.setPrefetchCount(100);
+        container.setMessageListener(transMessageListener);
         return container;
     }
 
