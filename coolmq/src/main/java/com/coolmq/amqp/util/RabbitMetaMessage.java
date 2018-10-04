@@ -8,11 +8,18 @@ package com.coolmq.amqp.util;
  * @version V0.1
  */
 public class RabbitMetaMessage {
+	String messageId;
 	String exchange;
 	String routingKey;
-	boolean autoTrigger;
-	boolean returnCallback;
 	Object payload;
+
+	public String getMessageId(){
+		return this.messageId;
+	}
+
+	public void setMessageId(String messageId){
+		this.messageId = messageId;
+	}
 	
 	public Object getPayload() {
 		return payload;
@@ -20,12 +27,7 @@ public class RabbitMetaMessage {
 	public void setPayload(Object payload) {
 		this.payload = payload;
 	}
-	public boolean isReturnCallback() {
-		return returnCallback;
-	}
-	public void setReturnCallback(boolean returnCallback) {
-		this.returnCallback = returnCallback;
-	}
+
 	public String getExchange() {
 		return exchange;
 	}
@@ -38,12 +40,8 @@ public class RabbitMetaMessage {
 	public void setRoutingKey(String routingKey) {
 		this.routingKey = routingKey;
 	}
-	public boolean isAutoTrigger() {
-		return autoTrigger;
-	}
-	public void setAutoTrigger(boolean autoTrigger) {
-		this.autoTrigger = autoTrigger;
-	}
+
+
 	
 	
 	

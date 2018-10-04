@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/coolmq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-config-server-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-discovery-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-message-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-message-daemon" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-message-demo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/microservice-message-provider" charset="UTF-8" />
+  </component>
+</project>

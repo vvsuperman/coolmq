@@ -7,6 +7,27 @@ package com.coolmq.amqp.util;
  * @version V0.1
  */
 public class MQConstants {
+
+	/** 消息重发计数*/
+	public static final String MQ_RESEND_COUNTER = "mq.resend.counter";
+
+	/** 消息最大重发次数*/
+	public static final long MAX_RETRY_COUNT = 3;
+
+	/** 分隔符*/
+	public static final String DB_SPLIT = ",";
+
+	/** 缓存超时时间,超时进行重发 */
+	public static final long TIME_GAP = 2000;
+
+	public static final String TIME_PATTERN = "yyyy-MM-dd HH:mm:ss";
+
+
+	/**处于ready状态消息*/
+	public static final Object MQ_MSG_READY = "mq.msg.ready";
+
+	/**处于prepare状态消息*/
+	public static final Object MQ_MSG_PREPARE = "mq.msg.prepare";
 	
 	/**你的业务交换机名称*/
 	public static final String BUSINESS_EXCHANGE = "business.exchange";
@@ -29,7 +50,7 @@ public class MQConstants {
 	public static final int BASE_NUM = 2;
 	/** 空的字符串 */
 	public static final String BLANK_STR = "";
-	
-	
+
+
 
 }

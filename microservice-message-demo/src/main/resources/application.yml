@@ -1,0 +1,44 @@
+
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://discovery:8761/eureka/
+#  instance:
+#    preferIpAddress: true
+#ribbon:
+#  eureka:
+#    enabled: true         # 默认为true。如果设置为false，Ribbon将不会从Eureka中获得服务列表，而是使用静态配置的服务列表。静态服务列表可使用：<client>.ribbon.listOfServers来指定。参考：http://projects.spring.io/spring-cloud/docs/1.0.3/spring-cloud.html#spring-cloud-ribbon-without-eureka
+#
+### 参考：https://spring.io/guides/gs/client-side-load-balancing/
+
+#mq config
+#spring.rabbitmq.address: localhost:5672
+
+server:
+  port: 9020
+spring:
+  application:
+    name: microservice-message-provdier
+
+#mq config
+#spring.rabbitmq.address: localhost:5672
+spring.rabbitmq.host: localhost
+spring.rabbitmq.port: 5672
+spring.rabbitmq.username: fanglaosi
+spring.rabbitmq.password: fanglaosi
+spring.rabbitmq.listener.concurrency: 5
+spring.rabbitmq.listener.max-concurrency: 20
+spring.rabbitmq.listener.retry.enabled: true
+spring.rabbitmq.virtual.host: laosiji
+spring.rabbitmq.cache.channel.size: 100
+spring.rabbitmq.listener.acknowledge-mode: manual
+spring.rabbitmq.listener.publish-returns: true;
+
+#redis config
+redis.host: localhost
+redis.port: 6379
+redis.timeout: 10000
+redis.pool.max-active: 20
+redis.pool.max-wait: -1
+redis.pool.max-idle: 10
+redis.pool.min-idle: 5

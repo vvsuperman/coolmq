@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="coolmq-1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/coolmq/target/coolmq-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

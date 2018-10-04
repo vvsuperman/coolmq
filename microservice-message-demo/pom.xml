@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>microservice-message-provider</artifactId>
+  <packaging>jar</packaging>
+
+  <parent>
+    <groupId>com.itmuch.cloud</groupId>
+    <artifactId>spring-cloud-microservice-study</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+
+  <dependencies>
+    <dependency>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-data-redis</artifactId>
+	</dependency>
+
+    <dependency>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-actuator</artifactId>
+    </dependency>
+    
+    <dependency>
+	    <groupId>com.furioustidy</groupId>
+	    <artifactId>coolmq</artifactId>
+	    <version>1.0-SNAPSHOT</version>
+    </dependency>
+    
+    <dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjweaver</artifactId>
+	</dependency>
+
+
+    <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>2.8.9</version>
+    </dependency>
+
+    <dependency>
+        <groupId>org.springframework.amqp</groupId>
+        <artifactId>spring-rabbit</artifactId>
+        <version>2.0.3.RELEASE</version>
+    </dependency>
+
+    <!--<dependency>-->
+        <!--<groupId>org.springframework.data</groupId>-->
+        <!--<artifactId>spring-data-redis</artifactId>-->
+        <!--<version>2.0.2.RELEASE</version>-->
+    <!--</dependency>-->
+
+
+    <!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
+    <dependency>
+        <groupId>org.aspectj</groupId>
+        <artifactId>aspectjrt</artifactId>
+        <version>1.8.13</version>
+    </dependency>
+
+  </dependencies>
+</project>

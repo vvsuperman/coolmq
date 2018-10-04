@@ -9,17 +9,15 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>microservice-discovery-eureka</module>
-    <module>microservice-config-server-eureka</module>
-    <module>microservice-message-provider</module>
-    <module>microservice-message-consumer</module>
+    <module>microservice-message-demo</module>
+    <module>coolmq</module>
   </modules>
 
   <!-- 使用最新的spring-boot版本 -->
   <parent>
     <groupId>org.springframework.boot</groupId>
     <artifactId>spring-boot-starter-parent</artifactId>
-    <version>1.5.8.RELEASE</version>
+    <version>2.0.1.RELEASE</version>
   </parent>
 
   <properties>
@@ -32,7 +30,7 @@
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
-        <version>Dalston.SR4</version>
+        <version>Finchley.SR1</version>
         <type>pom</type>
         <scope>import</scope>
       </dependency>

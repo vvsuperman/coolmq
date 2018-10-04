@@ -1,0 +1,1160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutomaticModuleUnloader">
+    <loaded-modules>
+      <module name="coolmq" />
+      <module name="spring-cloud-microservice-study" />
+      <module name="microservice-message-demo" />
+      <module name="microservice-message-provider" />
+    </loaded-modules>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b6f4f907-78ca-4a50-a757-45879c79635b" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coolmq/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/coolmq/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/annotation/MqSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/annotation/TransMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/annotation/SenderWraper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/DeadQueueConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/DeadQueueConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/RabbitConnectionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/RabbitConnectionConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/RabbitTemplateConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/RabbitTemplateConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/listener/AbstractMessageListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/listener/AbstractMessageListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/sender/RabbitSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/sender/RabbitSender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/MQConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/MQConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/RabbitMetaMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/RabbitMetaMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coolmq/src/main/resources/rabbitmq-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/coolmq/src/main/resources/rabbitmq-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coolmq/src/main/resources/redis-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/coolmq/src/main/resources/redis-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-config-server-eureka/.springBeans" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-config-server-eureka/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-config-server-eureka/src/main/java/com/itmuch/cloud/study/ConfigServerEurekaApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-config-server-eureka/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-config-server-eureka/src/main/resources/application2.yml.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-config-server-eureka/src/main/resources/config-dev/rabbitmq-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-config-server-eureka/src/main/resources/config-dev/redis-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-discovery-eureka/.springBeans" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-discovery-eureka/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-discovery-eureka/src/main/java/com/itmuch/cloud/study/EurekaApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-discovery-eureka/src/main/resources/application-ha.yml.bak" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-discovery-eureka/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-consumer/.springBeans" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-consumer/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-consumer/src/main/java/com/itmuch/cloud/study/consumer/BizQueueConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-consumer/src/main/java/com/itmuch/cloud/study/consumer/CustomMessageListenerAdapter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-consumer/src/main/java/com/itmuch/cloud/study/consumer/MessageConsumerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-consumer/src/main/java/com/itmuch/cloud/study/consumer/listener/BizMessageListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-consumer/src/main/java/com/itmuch/cloud/study/consumer/listener/SimpleBizListener.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-consumer/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-consumer/src/main/resources/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-provider/.springBeans" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-provider/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/MessageProviderApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/controller/MessageProviderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/provider/MessageSender.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-provider/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/microservice-message-provider/src/main/resources/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/microservice-message-consumer/target/" />
+    <ignored path="$PROJECT_DIR$/microservice-message-provider/target/" />
+    <ignored path="$PROJECT_DIR$/microservice-discovery-eureka/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/microservice-config-server-eureka/target/" />
+    <ignored path="$PROJECT_DIR$/microservice-message-daemon/target/" />
+    <ignored path="$PROJECT_DIR$/coolmq/target/" />
+    <ignored path="$PROJECT_DIR$/microservice-message-demo/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="RabbitTemplateConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/RabbitTemplateConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="344">
+              <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="1173">
+                <caret line="69" column="12" selection-start-line="69" selection-end-line="70" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyAnonFanoutListener.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/microservice-message-demo/src/main/java/com/itmuch/cloud/study/annotation/MyAnonFanoutListener.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name=".project" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.project">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="MessageDemoApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/microservice-message-demo/src/main/java/com/itmuch/cloud/study/MessageDemoApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/microservice-message-demo/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="47" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TransactionSender.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/sender/TransactionSender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>automatic</find>
+      <find>getMsgPrepare</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/microservice-message-daemon/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-message-daemon/src/test/java/MsgTest.java" />
+        <option value="$PROJECT_DIR$/microservice-message-daemon/src/test/java/com/msgdemo/MsgTest.java" />
+        <option value="$PROJECT_DIR$/microservice-message-daemon/src/main/java/com/msgdemo/MsgReceiver.java" />
+        <option value="$PROJECT_DIR$/microservice-message-daemon/src/main/java/com/msgdemo/MsgSender.java" />
+        <option value="$PROJECT_DIR$/microservice-message-daemon/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/microservice-message-consumer/src/main/java/com/itmuch/cloud/study/consumer/MessageConsumerApplication.java" />
+        <option value="$PROJECT_DIR$/coolmq/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/provider/SimpleSender.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/provider/MessageProviderController.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/provider/TransQueueListener.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/amqp/config/RabbitTemplateConfig.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/amqp/config/RedisConfig.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/amqp/config/RabbitConnectionConfig.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/amqp/listener/DeadQueueListener.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/amqp/listener/AbstractMessageListener.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/amqp/config/DeadQueueConfig.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/MQConstants.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/RedisConfig.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/AlertSender.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/CompleteCorrelationData.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/DBCoordinator.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/RabbitMetaMessage.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/daemontask/ResendProcess.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/RabbitTemplateConfig.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/resources/redis-dev.yml" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/resources/rabbitmq-dev.yml" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/listener/DeadLetterMessageListener.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/MessageProviderApplication.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/provider/MessageSender.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/DBRedisCoordinator.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/listener/DeadQueueListener.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/consumer/TransQueueListener.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/consumer/TransMessageListener.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/consumer/MessageListener.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/consumer/MessageListenerAnnotation.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/consumer/BizQueueConfig.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/DeadQueueConfig.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/RabbitConnectionConfig.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/annotation/MyAnonFanoutListener.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/annotation/TransMessage.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/listener/AbstractMessageListener.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/sender/RabbitSender.java" />
+        <option value="$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/sender/TransactionSender.java" />
+        <option value="$PROJECT_DIR$/microservice-message-provider/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/microservice-message-demo/src/main/java/com/itmuch/cloud/study/MessageProviderApplication.java" />
+        <option value="$PROJECT_DIR$/microservice-message-demo/src/main/java/com/itmuch/cloud/study/MessageDemoApplication.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="14" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="709" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="coolmq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coolmq" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coolmq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coolmq" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-message-demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coolmq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coolmq" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-message-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coolmq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coolmq" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-message-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coolmq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coolmq" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-message-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coolmq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coolmq" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-message-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coolmq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coolmq" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-message-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="consumer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coolmq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coolmq" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-message-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="coolmq" type="b2602c69:ProjectViewProjectNode" />
+              <item name="coolmq" type="462c0819:PsiDirectoryNode" />
+              <item name="microservice-message-demo" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="study" type="462c0819:PsiDirectoryNode" />
+              <item name="provider" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="SearchEverywhereHistoryKey" value="importSe&#9;PSI&#9;JAVA://org.springframework.context.annotation.ImportSelector&#10;dbredis&#9;FILE&#9;file:///Users/fw/Documents/study/coolmq/coolmq/src/main/java/com/coolmq/amqp/util/DBRedisCoordinator.java&#10;dbredi&#9;FILE&#9;file:///Users/fw/Documents/study/coolmq/coolmq/src/main/java/com/coolmq/amqp/util/DBRedisCoordinator.java&#10;MQCON&#9;FILE&#9;file:///Users/fw/Documents/study/coolmq/coolmq/src/main/java/com/coolmq/amqp/util/MQConstants.java" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.msgdemo" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.itmuch.cloud.study.provider" />
+      <recent name="com.coolmq.amqp.sender" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/consumer" />
+      <recent name="$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.MessageProviderApplication">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="MsgTest.hello" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="microservice-message-daemon" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.msgdemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.msgdemo" />
+      <option name="MAIN_CLASS_NAME" value="com.msgdemo.MsgTest" />
+      <option name="METHOD_NAME" value="hello" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="ConfigServerEurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="microservice-config-server-eureka" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itmuch.cloud.study.ConfigServerEurekaApplication" />
+    </configuration>
+    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="main2" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itmuch.cloud.study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itmuch.cloud.study.EurekaApplication" />
+    </configuration>
+    <configuration name="EurekaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="microservice-discovery-eureka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itmuch.cloud.study.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itmuch.cloud.study.EurekaApplication" />
+    </configuration>
+    <configuration name="MessageConsumerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="microservice-message-consumer" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itmuch.cloud.study.consumer.MessageConsumerApplication" />
+    </configuration>
+    <configuration name="MessageDaemonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="microservice-message-daemon" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.coolmq.MessageDaemonApplication" />
+    </configuration>
+    <configuration name="MessageProviderApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="microservice-message-demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.itmuch.cloud.study.MessageProviderApplication" />
+    </configuration>
+    <configuration name="MsgDemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="microservice-message-daemon" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.msgdemo.MsgDemoApplication" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="main" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.MessageDaemonApplication" />
+      <item itemvalue="Spring Boot.MsgDemoApplication" />
+      <item itemvalue="Spring Boot.ConfigServerEurekaApplication" />
+      <item itemvalue="Spring Boot.MessageProviderApplication" />
+      <item itemvalue="Spring Boot.MessageConsumerApplication" />
+      <item itemvalue="Spring Boot.EurekaApplication" />
+      <item itemvalue="Spring Boot.EurekaApplication (1)" />
+      <item itemvalue="JUnit.MsgTest.hello" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.MsgTest.hello" />
+        <item itemvalue="Spring Boot.EurekaApplication (1)" />
+        <item itemvalue="Spring Boot.EurekaApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b6f4f907-78ca-4a50-a757-45879c79635b" name="Default" comment="" />
+      <created>1536059082096</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1536059082096</updated>
+      <workItem from="1536059086985" duration="6572000" />
+      <workItem from="1536378964954" duration="13062000" />
+      <workItem from="1537022093152" duration="48000" />
+      <workItem from="1537582656648" duration="37611000" />
+      <workItem from="1538288812188" duration="31517000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="MsgTest_hello - 2018.09.12 at 15h 13m 05s.xml">
+      <configuration name="MsgTest.hello" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsgTest_hello - 2018.09.12 at 15h 17m 15s.xml">
+      <configuration name="MsgTest.hello" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsgTest_hello - 2018.09.12 at 15h 33m 15s.xml">
+      <configuration name="MsgTest.hello" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsgTest_hello - 2018.09.12 at 18h 07m 04s.xml">
+      <configuration name="MsgTest.hello" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsgTest_hello - 2018.09.12 at 18h 07m 46s.xml">
+      <configuration name="MsgTest.hello" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsgTest_hello - 2018.09.12 at 20h 25m 28s.xml">
+      <configuration name="MsgTest.hello" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsgTest_hello - 2018.09.12 at 20h 33m 16s.xml">
+      <configuration name="MsgTest.hello" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsgTest_hello - 2018.09.12 at 20h 36m 27s.xml">
+      <configuration name="MsgTest.hello" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsgTest_hello - 2018.09.12 at 20h 47m 03s.xml">
+      <configuration name="MsgTest.hello" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MsgTest_hello - 2018.09.12 at 20h 51m 50s.xml">
+      <configuration name="MsgTest.hello" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="88810000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="14" y="23" width="1280" height="709" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50078124" side_tool="true" weight="0.4992126" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.31496063" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32755905" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="bottom" id="Java Enterprise" order="7" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49921876" weight="0.4885246" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23984376" />
+      <window_info id="Web" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.18425196" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="right" id="Bean Validation" order="3" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="UnloadedModulesList">
+    <module name="main" />
+    <module name="main1" />
+    <module name="main2" />
+    <module name="main3" />
+    <module name="main4" />
+    <module name="main5" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.0.3.RELEASE/spring-rabbit-2.0.3.RELEASE.jar!/org/springframework/amqp/rabbit/annotation/EnableRabbit.class</url>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/amqp/listener/DeadQueueListener.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/sender/TransactionSender.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/sender/TransactionSender.java</url>
+          <line>54</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/listener/AbstractMessageListener.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="12" />
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>applicationContext.getBean(&quot;DBRedisCoordinator&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>applicationContext.getBean(dbCoordinator)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/amqp/util/RabbitMetaMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/main3.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-config-server-eureka/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-config-server-eureka/src/main/resources/config-dev/rabbitmq-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-config-server-eureka/src/main/resources/config-dev/redis-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/main4.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/resources/redis-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" lean-forward="true" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/resources/rabbitmq-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="531">
+          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/MessageProviderApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/consumer/BizQueueConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="72" column="72" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1747#1748#0" expanded="true" />
+            <element signature="e#1814#1815#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/controller/MessageProviderController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="46" column="20" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/listener/DeadLetterMessageListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/listener/DeadQueueListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="37" lean-forward="true" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/DBCoordinator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="27" column="16" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/MQConstants.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="376">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.5.RELEASE/spring-core-5.0.5.RELEASE.jar!/org/springframework/core/annotation/AliasFor.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.5.RELEASE/spring-core-5.0.5.RELEASE-sources.jar!/org/springframework/core/annotation/AliasFor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.5.RELEASE/spring-context-5.0.5.RELEASE.jar!/org/springframework/context/annotation/ImportSelector.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.0.5.RELEASE/spring-context-5.0.5.RELEASE-sources.jar!/org/springframework/context/annotation/ImportSelector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="31" column="59" selection-start-line="31" selection-start-column="59" selection-end-line="31" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.13/aspectjrt-1.8.13.jar!/org/aspectj/lang/annotation/Around.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/aspectj/aspectjrt/1.8.13/aspectjrt-1.8.13-sources.jar!/org/aspectj/lang/annotation/Around.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="30" column="19" lean-forward="true" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.0.3.RELEASE/spring-rabbit-2.0.3.RELEASE-sources.jar!/org/springframework/amqp/rabbit/annotation/RabbitListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="109" column="7" lean-forward="true" selection-start-line="109" selection-start-column="7" selection-end-line="109" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/annotation/MyAnonFanoutListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="15" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/AlertSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/DeadQueueConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/RedisConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/RabbitConnectionConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="89" column="15" lean-forward="true" selection-start-line="89" selection-start-column="15" selection-end-line="89" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/annotation/TransMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/amqp/spring-rabbit/2.0.3.RELEASE/spring-rabbit-2.0.3.RELEASE-sources.jar!/org/springframework/amqp/rabbit/support/CorrelationData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="50" column="23" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="23" />
+          <folding>
+            <element signature="e#1377#1378#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/CompleteCorrelationData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/provider/MessageSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/sender/RabbitSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="43" column="107" selection-start-line="43" selection-start-column="96" selection-end-line="43" selection-end-column="107" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/RabbitMetaMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="13" column="19" lean-forward="true" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/daemontask/ResendProcess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="31" column="64" selection-start-line="31" selection-start-column="64" selection-end-line="31" selection-end-column="64" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/util/DBRedisCoordinator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="71" column="30" selection-start-line="71" selection-start-column="30" selection-end-line="71" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/listener/AbstractMessageListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="59" column="33" selection-start-line="59" selection-start-column="24" selection-end-line="59" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/consumer/TransMessageListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-provider/src/main/java/com/itmuch/cloud/study/consumer/MessageListenerAnnotation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="254">
+          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/sender/TransactionSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="69" column="21" selection-start-line="69" selection-start-column="21" selection-end-line="69" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/coolmq/src/main/java/com/coolmq/amqp/config/RabbitTemplateConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-provider/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="31" column="16" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-demo/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.project">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-demo/src/main/java/com/itmuch/cloud/study/MessageDemoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-demo/src/main/java/com/itmuch/cloud/study/annotation/MyAnonFanoutListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/microservice-message-demo/src/main/java/com/itmuch/cloud/study/provider/MessageSender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="22" column="17" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="1173">
+            <caret line="69" column="12" selection-start-line="69" selection-end-line="70" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>microservice-config-server-eureka</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>coolmq-1.0-SNAPSHOT</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

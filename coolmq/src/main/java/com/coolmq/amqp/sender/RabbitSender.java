@@ -1,5 +1,9 @@
 package com.coolmq.amqp.sender;
 
+import com.coolmq.amqp.util.CompleteCorrelationData;
+import com.coolmq.amqp.util.RabbitMetaMessage;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.AmqpException;
@@ -11,11 +15,7 @@ import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.amqp.rabbit.support.CorrelationData;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
-
-import com.coolmq.amqp.util.MQConstants;
-import com.coolmq.amqp.util.RabbitMetaMessage;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.stereotype.Component;
 
 import java.util.UUID;
 
@@ -27,6 +27,7 @@ import java.util.UUID;
  * @version V0.1
  */
 
+@Component
 public class RabbitSender {
 
 	@Autowired
@@ -37,6 +38,12 @@ public class RabbitSender {
 	
 	Logger logger =  LoggerFactory.getLogger(this.getClass());
 
+    /**扩展消息的CorrelationData，方便在回调中应用*/
+	public void setCorrelationData(String coordinator){
+	    rabbitTemplate.setCorrelationDataPostProcessor(((message, correlationData) ->
+          new CompleteCorrelationData(correlationData != null ? correlationData.getId() : null, coordinator)));
+    }
+
     /**
      * 发送MQ消息
      * @param rabbitMetaMessage Rabbit元信息对象，用于存储交换器、队列名、消息体
@@ -46,8 +53,7 @@ public class RabbitSender {
     public  String send(RabbitMetaMessage rabbitMetaMessage) throws JsonProcessingException {
         final String msgId = UUID.randomUUID().toString();
         
-        // 放缓存
-        redisTemplate.opsForHash().put(MQConstants.MQ_PRODUCER_RETRY_KEY, msgId, rabbitMetaMessage);
+
         MessagePostProcessor messagePostProcessor = new MessagePostProcessor() {
             @Override
             public Message postProcessMessage(Message message) throws AmqpException {
