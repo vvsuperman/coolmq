@@ -16,12 +16,10 @@ microservice-demo们为spring-boot集成demo
 3. 声明队列: BizQueueConfig.java  
 4. 声明消息接受者: TransMessageListener.java  
 5. provider中加入 @TransMessage包裹业务操作即可
-
-Spring cloud配置、启动请参考：https://github.com/eacdy/spring-cloud-study
-
+6. 代码使用示例请参考microservice-message-demo
 
 # coolmq 用rabbitmq解决分布式事务
-传统的事务解决方案，例如TCC，都太消耗资源，而rabbitmq用两阶段确认确保了消息只要发送，就能送达。本方案是基于Spring-Boot Amqp，已经在生产上部署实践近1年，可用于支付等跨服务调用的业务情况
+传统的事务解决方案，例如TCC，都太消耗资源，而rabbitmq用两阶段确认确保了消息只要发送，就能送达。本方案是基于Spring-Boot Amqp，已经在生产上部署实践，可用于支付等跨服务调用的业务情况
 
 ## 一 两阶段确认
 ### 1 发送确认
