@@ -1,19 +1,21 @@
 # 用法
 
+## 更新
+
+1. 自定义注解插入发送切面
+2. 抽象消息存储
+3. 扩展元消息
+
 ## 项目结构说明  
 coolmq为实际包  
-microservice们均为demo  
-microservice-discovery-eureka为服务发现  
-microservice-config-server-eureka为服务注册中心  
-microservice-message-provider为消息发送者  
-microservice-message-consumer为消息接收者  
+microservice-demo们为spring-boot集成demo  
 
 ## 使用说明  
 1. maven引入coolmq依赖  
 2. 在项目启动中配置包扫描:@SpringBootApplication(scanBasePackages= {"com.coolmq.amqp.config"}),以自动装配项目bean  
-3. consumer中声明队列: BizQueueConfig.java  
-4. consumer中声明消息接受者: BizMessageListener.java  
-5. provider中发送消息: RabbitSender.send()即可  
+3. 声明队列: BizQueueConfig.java  
+4. 声明消息接受者: TransMessageListener.java  
+5. provider中加入 @TransMessage包裹业务操作即可
 
 Spring cloud配置、启动请参考：https://github.com/eacdy/spring-cloud-study
 
