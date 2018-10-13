@@ -19,7 +19,7 @@ microservice-demo们为spring-boot集成demo
 6. 代码使用示例请参考microservice-message-demo
 
 ## 视频教程
-[《Spring Cloud分布式事务(一):Rabbitmq基础》](https://segmentfault.com/l/1500000015339065)
+[《Spring Cloud分布式事务(一):Rabbitmq基础》](https://segmentfault.com/l/1500000015339065)  
 [《Spring Cloud分布式事务(二):原理与源码》](https://segmentfault.com/l/1500000012729662)  
 [《Spring Cloud分布式事务(三):深入补偿机制》](https://segmentfault.com/l/1500000016673126)
 
